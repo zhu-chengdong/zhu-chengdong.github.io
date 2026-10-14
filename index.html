@@ -3,11 +3,312 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chengdong Zhu</title>
+  <meta name="description" content="Chengdong Zhu, PhD researcher at the University of York. Underwater robotics, visual SLAM, and York-Tank, a stereo dataset accepted by Sensors in October 2026.">
+  <meta name="author" content="Chengdong Zhu">
+  <meta name="theme-color" content="#123f47">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chengdong Zhu | Underwater Robotics & Visual SLAM">
+  <meta property="og:description" content="Explore York-Tank: 16 sequences and 18,948 stereo image pairs for studying underwater visual SLAM. Paper accepted by Sensors; Sequence 1 preview available on Zenodo.">
+  <meta property="og:url" content="https://zhuchengdong.com/">
+  <meta property="og:site_name" content="Chengdong Zhu">
+  <link rel="canonical" href="https://zhuchengdong.com/">
+  <title>Chengdong Zhu | Underwater Robotics & Visual SLAM</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172d34;
+      --muted: #52646b;
+      --accent: #17606a;
+      --deep: #123f47;
+      --paper: #fafbf9;
+      --line: #dce4e3;
+      --wash: #eef4f2;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 1.5rem; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.65; }
+    a { color: var(--accent); text-underline-offset: .22em; }
+    a:hover { color: var(--deep); }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { line-height: 1.2; }
+    h1, h2 { font-family: var(--serif); font-weight: 400; }
+    .wrap { width: min(1080px, calc(100% - 64px)); margin-inline: auto; }
+    .skip { position: absolute; top: -100px; left: 1rem; z-index: 10; background: white; padding: .6rem 1rem; }
+    .skip:focus { top: 1rem; }
+    .masthead { border-bottom: 1px solid var(--line); }
+    .masthead-inner { display: flex; justify-content: space-between; align-items: center; gap: 2rem; min-height: 86px; }
+    .brand { color: var(--ink); font-size: 17px; font-weight: 650; text-decoration: none; }
+    nav { display: flex; gap: 1.6rem; flex-wrap: wrap; font-size: 14px; }
+    nav a { color: var(--muted); text-decoration: none; padding-block: .5rem; }
+    nav a:hover { text-decoration: underline; }
+    .eyebrow { color: var(--accent); font-size: 12px; font-weight: 650; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 1rem; }
+    .hero { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 5rem; align-items: center; padding-block: 75px 65px; }
+    h1 { font-size: clamp(42px, 5.5vw, 64px); letter-spacing: -.035em; margin-bottom: 1rem; }
+    .role { font-size: 20px; line-height: 1.5; margin-bottom: 1.2rem; }
+    .intro { color: var(--muted); max-width: 640px; margin-bottom: 0; }
+    .affiliation { padding-left: 2rem; border-left: 1px solid var(--line); }
+    .affiliation strong { display: block; font-size: 18px; font-weight: 600; margin-bottom: .35rem; }
+    .affiliation p { color: var(--muted); font-size: 14px; margin-bottom: 1.4rem; }
+    .affiliation a { font-size: 14px; }
+    .project { border-top: 2px solid var(--deep); padding-top: 36px; }
+    .section-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; }
+    .section-top h2 { font-size: 40px; letter-spacing: -.025em; margin-bottom: 1rem; }
+    .section-top .eyebrow { margin-bottom: .6rem; }
+    .badge { display: inline-block; color: var(--deep); background: #e3efeb; padding: .45rem .85rem; border: 1px solid #c8ddd6; border-radius: 4px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+    .paper-title { max-width: 910px; font-family: var(--serif); font-size: clamp(24px, 3vw, 32px); font-weight: 400; line-height: 1.35; margin-bottom: .85rem; }
+    .authors { color: var(--muted); font-size: 15px; margin-bottom: 1.35rem; }
+    .summary { max-width: 860px; font-size: 17px; color: var(--muted); margin-bottom: 1.6rem; }
+    .actions { display: flex; gap: .8rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 45px; padding: .65rem 1.05rem; border: 1px solid var(--accent); border-radius: 4px; font-size: 14px; font-weight: 600; text-decoration: none; }
+    .button.primary { background: var(--deep); color: white; border-color: var(--deep); }
+    .button.primary:hover { background: #205862; }
+    .button.secondary:hover { background: var(--wash); }
+    .availability-note { padding: 1rem 1.2rem; border-left: 3px solid var(--accent); background: var(--wash); color: var(--muted); font-size: 14px; margin-bottom: 2rem; }
+    .availability-note strong { color: var(--ink); }
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0 0 1rem; border-block: 1px solid var(--line); }
+    .stat { display: flex; flex-direction: column; margin: 0; padding: 1.4rem 1.5rem; border-right: 1px solid var(--line); }
+    .stat:first-child { padding-left: 0; }
+    .stat:last-child { border-right: 0; }
+    .stat dt { color: var(--muted); font-size: 13px; }
+    .stat dd { order: -1; margin: 0 0 .25rem; font-family: var(--serif); font-size: 38px; line-height: 1.2; color: var(--deep); }
+    .specification { color: var(--muted); font-size: 14px; margin-bottom: 2.5rem; }
+    .dataset-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3.5rem; margin-bottom: 2rem; }
+    .subheading { font-size: 18px; font-weight: 600; margin-bottom: 1rem; }
+    .features { margin: 0; padding-left: 1.2rem; color: var(--muted); font-size: 15px; }
+    .features li { margin-bottom: .7rem; padding-left: .15rem; }
+    .features strong { color: var(--ink); font-weight: 600; }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+    caption { text-align: left; color: var(--muted); font-size: 13px; margin-bottom: .7rem; }
+    th { color: var(--muted); font-size: 12px; font-weight: 600; }
+    th, td { padding: .65rem .55rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th:first-child, td:first-child { padding-left: 0; white-space: nowrap; }
+    th:last-child, td:last-child { padding-right: 0; text-align: right; }
+    details { border-block: 1px solid var(--line); padding: .85rem 0; color: var(--muted); font-size: 14px; }
+    summary { cursor: pointer; font-weight: 600; color: var(--ink); }
+    details p { margin: .8rem 0 0; max-width: 880px; }
+    .content-section { border-top: 1px solid var(--line); margin-top: 3.5rem; padding-top: 2.2rem; }
+    .content-section h2 { font-size: 30px; letter-spacing: -.02em; margin-bottom: 1.6rem; }
+    .resource-list { margin: 0; }
+    .resource-row { display: grid; grid-template-columns: minmax(0, 210px) minmax(0, 1fr); gap: 2rem; padding: 1.05rem 0; border-bottom: 1px solid var(--line); }
+    .resource-row:first-child { padding-top: 0; }
+    .resource-row dt { font-size: 15px; font-weight: 600; }
+    .resource-row dd { margin: 0; font-size: 15px; overflow-wrap: anywhere; }
+    .resource-row p { color: var(--muted); font-size: 14px; margin: .3rem 0 0; }
+    .resource-status { display: block; font-size: 12px; color: var(--muted); font-weight: 400; margin-top: .15rem; }
+    .citation { background: var(--wash); margin-top: 1.5rem; padding: 1.2rem 1.4rem; }
+    .citation .eyebrow { margin-bottom: .6rem; font-size: 11px; }
+    .citation p:last-child { margin-bottom: 0; font-size: 14px; }
+    .media-intro { color: var(--muted); font-size: 15px; margin-top: -.6rem; }
+    .media-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .media-slot { background: var(--wash); border: 1px dashed #b5c9c7; padding: 1.4rem; }
+    .media-slot h3 { font-size: 17px; font-weight: 600; margin-bottom: .55rem; }
+    .media-slot p { color: var(--muted); font-size: 14px; margin-bottom: .7rem; }
+    .pending { font-size: 12px; color: var(--muted); }
+    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem; }
+    .contact h2 { margin-bottom: .8rem; }
+    .contact p { color: var(--muted); font-size: 15px; margin-bottom: 0; }
+    .contact-links { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: .7rem; overflow-wrap: anywhere; }
+    footer { border-top: 1px solid var(--line); padding-block: 1.2rem; font-size: 12px; color: var(--muted); }
+    .footer-inner { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    @media (max-width: 760px) {
+      .wrap { width: calc(100% - 40px); }
+      .masthead-inner { min-height: 76px; gap: 1rem; }
+      nav { gap: 1rem; font-size: 13px; }
+      .hero { grid-template-columns: 1fr; gap: 2rem; padding-block: 45px 40px; }
+      .role { font-size: 18px; }
+      .affiliation { padding-left: 1rem; }
+      .affiliation p { margin-bottom: .5rem; }
+      .section-top { flex-direction: column; gap: .1rem; margin-bottom: 1.3rem; }
+      .section-top h2 { margin-bottom: .4rem; }
+      .dataset-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .resource-row { grid-template-columns: minmax(0, 150px) minmax(0, 1fr); gap: 1rem; }
+      .media-grid, .contact { grid-template-columns: 1fr; }
+      .content-section { margin-top: 2.5rem; }
+    }
+    @media (max-width: 480px) {
+      .masthead-inner { align-items: flex-start; flex-direction: column; gap: .1rem; padding-block: 1rem .6rem; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stat { padding: 1rem; }
+      .stat:nth-child(2) { border-right: 0; }
+      .stat:nth-child(3) { padding-left: 0; }
+      .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .stat dd { font-size: 33px; }
+      .stat dt { font-size: 12px; }
+      .resource-row { grid-template-columns: 1fr; gap: .45rem; }
+      .actions { flex-direction: column; align-items: stretch; }
+    }
+    @media print {
+      body { background: white; font-size: 11pt; }
+      .wrap { width: 100%; }
+      nav, .skip { display: none; }
+      .hero { padding-block: 1.5rem; gap: 2rem; }
+      .content-section { margin-top: 1.5rem; }
+      .media-slot, .citation, .resource-row { break-inside: avoid; }
+      a { color: var(--ink); }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Chengdong Zhu",
+      "url": "https://zhuchengdong.com/",
+      "jobTitle": "PhD Researcher",
+      "affiliation": { "@type": "CollegeOrUniversity", "name": "University of York" },
+      "sameAs": ["https://github.com/zhu-chengdong"],
+      "knowsAbout": ["Underwater Robotics", "Visual SLAM", "Underwater Visual Localization", "Underwater Image Enhancement"]
+    }
+  </script>
 </head>
 <body>
-  <h1>Chengdong Zhu</h1>
-  <p>PhD Researcher in Underwater Robotics and Visual SLAM</p>
-  <p>University of York</p>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="brand" href="#main">Chengdong Zhu</a>
+      <nav aria-label="Main navigation">
+        <a href="#york-tank">Research</a>
+        <a href="#resources">Paper &amp; data</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="name">
+      <div>
+        <p class="eyebrow">Underwater robotics · Robot vision</p>
+        <h1 id="name">Chengdong Zhu</h1>
+        <p class="role">PhD Researcher in Underwater Robotics<br>and Visual SLAM</p>
+        <p class="intro">I study visual localization and image enhancement for underwater robots. My work combines visual SLAM, controlled datasets, and ROV platforms, with a longer-term research direction in underwater embodied intelligence.</p>
+      </div>
+      <aside class="affiliation" aria-label="Affiliation">
+        <p class="eyebrow">Based at</p>
+        <strong>University of York</strong>
+        <p>Department of Electronic Engineering<br>York, United Kingdom</p>
+        <a href="mailto:chengdong.zhu@york.ac.uk">chengdong.zhu@york.ac.uk</a>
+      </aside>
+    </section>
+
+    <article id="york-tank" class="project" aria-labelledby="project-title">
+      <div class="section-top">
+        <div>
+          <p class="eyebrow">Featured research / Dataset</p>
+          <h2 id="project-title">York-Tank</h2>
+        </div>
+        <span class="badge">Accepted by Sensors · October 2026</span>
+      </div>
+      <h3 class="paper-title">York-Tank: A Degradation-Aware and Difficulty-Stratified Stereo Dataset for Underwater Visual SLAM</h3>
+      <p class="authors">Chengdong Zhu and Mark Post · University of York</p>
+      <p class="summary">York-Tank is a controlled underwater stereo dataset for investigating how visual degradation affects SLAM tracking, localization, and failure behavior. Sequences share a controlled tank scene and are organized by dominant degradation factor and difficulty, supporting structured comparisons across challenging underwater conditions.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/zhu-chengdong/York-Tank">Project repository</a>
+        <a class="button secondary" href="https://doi.org/10.5281/zenodo.20432375">Sequence 1 preview on Zenodo</a>
+      </div>
+      <p class="availability-note"><strong>Release status — <time datetime="2026-10-14">14 October 2026</time>:</strong> the Sequence 1 preview is publicly available. The complete 16-sequence dataset is being uploaded to Zenodo and is not yet publicly available. The figures below describe the complete dataset.</p>
+
+      <dl class="stats" aria-label="Complete dataset statistics">
+        <div class="stat"><dt>Sequences</dt><dd>16</dd></div>
+        <div class="stat"><dt>Stereo image pairs</dt><dd>18,948</dd></div>
+        <div class="stat"><dt>Degradation factors</dt><dd>5</dd></div>
+        <div class="stat"><dt>Difficulty levels</dt><dd>4</dd></div>
+      </dl>
+      <p class="specification">Rectified grayscale stereo · 1280 × 800 pixels · 20 Hz · Approximately 15.8 minutes</p>
+
+      <div class="dataset-grid">
+        <section aria-labelledby="features-title">
+          <h3 class="subheading" id="features-title">Dataset characteristics</h3>
+          <ul class="features">
+            <li><strong>Controlled scene:</strong> a shared tank environment for studying the effects of visual degradation.</li>
+            <li><strong>Five factors:</strong> low illumination, non-uniform illumination, fast motion, texture deficiency, and dynamic interference.</li>
+            <li><strong>Structured difficulty:</strong> baseline, easy, hard, and hybrid conditions.</li>
+            <li><strong>Prepared full-release contents:</strong> synchronized stereo images, IMU measurements, calibration files, raw AprilTag-array reference poses, and ROS bag files.</li>
+          </ul>
+        </section>
+        <section aria-labelledby="difficulty-title">
+          <h3 class="subheading" id="difficulty-title">Difficulty structure</h3>
+          <table>
+            <caption>Sequence groups in the complete dataset</caption>
+            <thead><tr><th scope="col">Level</th><th scope="col">Condition</th><th scope="col">Sequences</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Level 1</th><td>Baseline</td><td>2</td></tr>
+              <tr><th scope="row">Level 2</th><td>Easy single degradation</td><td>5</td></tr>
+              <tr><th scope="row">Level 3</th><td>Hard single degradation</td><td>5</td></tr>
+              <tr><th scope="row">Level 4</th><td>Hybrid degradation</td><td>4</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+      <details>
+        <summary>Reference trajectories and evaluation</summary>
+        <p>The prepared release provides raw AprilTag-array poses in the fixed overhead-camera frame. They are not directly onboard left-camera poses; camera-frame evaluation requires a fixed transformation that is not yet supplied as a verified conversion. Some sequences also have partial reference-trajectory time coverage. Consult the <a href="https://github.com/zhu-chengdong/York-Tank#reference-trajectory-convention">project documentation</a> before trajectory evaluation.</p>
+      </details>
+    </article>
+
+    <section id="resources" class="content-section" aria-labelledby="resources-title">
+      <h2 id="resources-title">Paper &amp; data</h2>
+      <dl class="resource-list">
+        <div class="resource-row">
+          <dt>Paper<span class="resource-status">Accepted · October 2026</span></dt>
+          <dd><em>Sensors</em> (2026).<p id="paper-doi">Journal DOI and final bibliographic details will be added after publication.</p></dd>
+          <!-- PAPER DOI: replace the pending paragraph above with a verified journal DOI link and final bibliographic details after publication. -->
+        </div>
+        <div class="resource-row">
+          <dt>Project repository<span class="resource-status">Publicly available</span></dt>
+          <dd><a href="https://github.com/zhu-chengdong/York-Tank">github.com/zhu-chengdong/York-Tank</a><p>Dataset overview, sequence organization, release updates, and evaluation notes.</p></dd>
+        </div>
+        <div class="resource-row">
+          <dt>Sequence 1 preview<span class="resource-status">Publicly available</span></dt>
+          <dd><a href="https://doi.org/10.5281/zenodo.20432375">10.5281/zenodo.20432375</a><p>Existing Zenodo preview record; this is not the complete 16-sequence release.</p></dd>
+        </div>
+        <div id="full-dataset" class="resource-row">
+          <dt>Complete dataset<span class="resource-status">Upload in progress</span></dt>
+          <dd>16 sequences · 18,948 stereo image pairs<p>A verified download link will be added here once the complete Zenodo record is published.</p></dd>
+          <!-- FULL RELEASE: add the published, verified Zenodo DOI here; then update the release notice, its date, and this status. Do not link a reserved draft DOI. -->
+        </div>
+      </dl>
+      <aside class="citation" aria-label="Publication reference">
+        <p class="eyebrow">Publication reference · Accepted manuscript</p>
+        <p>Chengdong Zhu and Mark Post. “York-Tank: A Degradation-Aware and Difficulty-Stratified Stereo Dataset for Underwater Visual SLAM.” <em>Sensors</em>, accepted October 2026.</p>
+      </aside>
+    </section>
+
+    <section id="media" class="content-section" aria-labelledby="media-title">
+      <h2 id="media-title">Research media</h2>
+      <p class="media-intro">Space for future experimental footage and platform photographs.</p>
+      <div class="media-grid">
+        <div id="experiment-video" class="media-slot">
+          <h3>Experimental video</h3>
+          <p>Tank experiments and visual SLAM demonstrations.</p>
+          <span class="pending">To be added</span>
+          <!-- VIDEO: replace this placeholder with an accessible video link or player and a factual caption when footage is ready. -->
+        </div>
+        <div id="robot-photos" class="media-slot">
+          <h3>Robot &amp; experimental setup</h3>
+          <p>ROV platform, stereo sensing, and the tank environment.</p>
+          <span class="pending">To be added</span>
+          <!-- PHOTOS: replace this placeholder with approved photographs, descriptive alt text, and factual captions. -->
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="content-section contact" aria-labelledby="contact-title">
+      <div>
+        <h2 id="contact-title">Contact</h2>
+        <p>For questions about York-Tank or research collaboration in underwater robotics and visual localization.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:chengdong.zhu@york.ac.uk">chengdong.zhu@york.ac.uk</a>
+        <a href="https://github.com/zhu-chengdong">GitHub · zhu-chengdong</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap footer-inner">
+      <span>Chengdong Zhu · University of York</span>
+      <span>Last updated <time datetime="2026-10-14">14 October 2026</time></span>
+    </div>
+  </footer>
 </body>
 </html>
