@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Chengdong Zhu, PhD researcher at the University of York. Underwater robotics, visual SLAM, and York-Tank, a stereo dataset accepted by Sensors in October 2026.">
+  <meta name="description" content="Chengdong Zhu, PhD researcher at the University of York. Underwater robotics, visual SLAM, and York-Tank, a publicly available underwater stereo dataset.">
   <meta name="author" content="Chengdong Zhu">
   <meta name="theme-color" content="#123f47">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Chengdong Zhu | Underwater Robotics & Visual SLAM">
-  <meta property="og:description" content="Explore York-Tank: 16 sequences and 18,948 stereo image pairs for studying underwater visual SLAM. Paper accepted by Sensors; Sequence 1 preview available on Zenodo.">
+  <meta property="og:description" content="Explore York-Tank: 16 sequences and 18,948 stereo image pairs for studying underwater visual SLAM. Complete dataset publicly available on Zenodo; paper accepted by Sensors.">
   <meta property="og:url" content="https://zhuchengdong.com/">
   <meta property="og:site_name" content="Chengdong Zhu">
   <link rel="canonical" href="https://zhuchengdong.com/">
@@ -203,10 +203,10 @@
       <p class="authors">Chengdong Zhu and Mark Post · University of York</p>
       <p class="summary">York-Tank is a controlled underwater stereo dataset for investigating how visual degradation affects SLAM tracking, localization, and failure behavior. Sequences share a controlled tank scene and are organized by dominant degradation factor and difficulty, supporting structured comparisons across challenging underwater conditions.</p>
       <div class="actions">
-        <a class="button primary" href="https://github.com/zhu-chengdong/York-Tank">Project repository</a>
-        <a class="button secondary" href="https://doi.org/10.5281/zenodo.20432375">Sequence 1 preview on Zenodo</a>
+        <a class="button primary" href="https://doi.org/10.5281/zenodo.23347574">Download complete dataset on Zenodo</a>
+        <a class="button secondary" href="https://github.com/zhu-chengdong/York-Tank">Project repository</a>
       </div>
-      <p class="availability-note"><strong>Release status — <time datetime="2026-10-14">14 October 2026</time>:</strong> the Sequence 1 preview is publicly available. The complete 16-sequence dataset is being uploaded to Zenodo and is not yet publicly available. The figures below describe the complete dataset.</p>
+      <p class="availability-note"><strong>Complete dataset publicly available.</strong> Zenodo v2 includes all 16 sequences and 18,948 stereo image pairs, distributed as 16 sequence archives and one support archive (approximately 51.1 GB). <a href="https://doi.org/10.5281/zenodo.23347574">Download the complete release</a>. Availability verified on <time datetime="2026-10-15">15 October 2026</time>.</p>
 
       <dl class="stats" aria-label="Complete dataset statistics">
         <div class="stat"><dt>Sequences</dt><dd>16</dd></div>
@@ -223,7 +223,7 @@
             <li><strong>Controlled scene:</strong> a shared tank environment for studying the effects of visual degradation.</li>
             <li><strong>Five factors:</strong> low illumination, non-uniform illumination, fast motion, texture deficiency, and dynamic interference.</li>
             <li><strong>Structured difficulty:</strong> baseline, easy, hard, and hybrid conditions.</li>
-            <li><strong>Prepared full-release contents:</strong> synchronized stereo images, IMU measurements, calibration files, raw AprilTag-array reference poses, and ROS bag files.</li>
+            <li><strong>Release contents:</strong> synchronized stereo images, IMU measurements, calibration files, raw AprilTag-array reference poses, and ROS bag files.</li>
           </ul>
         </section>
         <section aria-labelledby="difficulty-title">
@@ -242,7 +242,7 @@
       </div>
       <details>
         <summary>Reference trajectories and evaluation</summary>
-        <p>The prepared release provides raw AprilTag-array poses in the fixed overhead-camera frame. They are not directly onboard left-camera poses; camera-frame evaluation requires a fixed transformation that is not yet supplied as a verified conversion. Some sequences also have partial reference-trajectory time coverage. Consult the <a href="https://github.com/zhu-chengdong/York-Tank#reference-trajectory-convention">project documentation</a> before trajectory evaluation.</p>
+        <p>The release provides raw AprilTag-array poses in the fixed overhead-camera frame. They are not directly onboard left-camera poses; camera-frame evaluation requires a fixed transformation that is not yet supplied as a verified conversion. Some sequences also have partial reference-trajectory time coverage. Consult the <a href="https://github.com/zhu-chengdong/York-Tank#reference-trajectory-convention">project documentation</a> before trajectory evaluation.</p>
       </details>
     </article>
 
@@ -258,14 +258,13 @@
           <dt>Project repository<span class="resource-status">Publicly available</span></dt>
           <dd><a href="https://github.com/zhu-chengdong/York-Tank">github.com/zhu-chengdong/York-Tank</a><p>Dataset overview, sequence organization, release updates, and evaluation notes.</p></dd>
         </div>
-        <div class="resource-row">
-          <dt>Sequence 1 preview<span class="resource-status">Publicly available</span></dt>
-          <dd><a href="https://doi.org/10.5281/zenodo.20432375">10.5281/zenodo.20432375</a><p>Existing Zenodo preview record; this is not the complete 16-sequence release.</p></dd>
-        </div>
         <div id="full-dataset" class="resource-row">
-          <dt>Complete dataset<span class="resource-status">Upload in progress</span></dt>
-          <dd>16 sequences · 18,948 stereo image pairs<p>A verified download link will be added here once the complete Zenodo record is published.</p></dd>
-          <!-- FULL RELEASE: add the published, verified Zenodo DOI here; then update the release notice, its date, and this status. Do not link a reserved draft DOI. -->
+          <dt>Complete dataset<span class="resource-status">Publicly available · Zenodo v2</span></dt>
+          <dd><a href="https://doi.org/10.5281/zenodo.23347574">10.5281/zenodo.23347574</a><p>16 sequences · 18,948 stereo image pairs · Approximately 51.1 GB. Stereo images, ROS bags, IMU measurements, reference poses, calibration, and supporting documentation. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p></dd>
+        </div>
+        <div class="resource-row">
+          <dt>Earlier Sequence 1 preview<span class="resource-status">Publicly available · Zenodo v1</span></dt>
+          <dd><a href="https://doi.org/10.5281/zenodo.20432375">10.5281/zenodo.20432375</a><p>Earlier single-sequence preview. Use the v2 record above for the complete dataset.</p></dd>
         </div>
       </dl>
       <aside class="citation" aria-label="Publication reference">
@@ -307,7 +306,7 @@
   <footer>
     <div class="wrap footer-inner">
       <span>Chengdong Zhu · University of York</span>
-      <span>Last updated <time datetime="2026-10-14">14 October 2026</time></span>
+      <span>Last updated <time datetime="2026-10-15">15 October 2026</time></span>
     </div>
   </footer>
 </body>
