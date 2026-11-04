@@ -17,3 +17,32 @@ html[lang=zh-CN] h1,html[lang=zh-CN] h2,html[lang=zh-CN] h3{font-family:var(--sa
 @media(max-width:780px){.brand{white-space:normal;min-width:0}.header-controls{flex-shrink:0}.language-switch button{min-width:44px}}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}}
 @media print{.masthead,.actions,.language-switch,.menu-toggle,.contact-section,.footer,.copy-button{display:none!important}.wrap{width:100%;max-width:none}.hero,.detail-layout,.featured-project,.project-row{display:block}.section{padding-block:25px}.hero-figure{max-width:500px}.detail-aside{position:static}.detail-image{break-inside:avoid}a{color:inherit}body{font-size:11pt}.expertise-band{background:white}}
+
+/* R5 project presentation: keep the established large type sizes. */
+.project-index{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0 0 42px;padding:0;position:static;background:none;border:0;box-shadow:none}
+.project-index-link{display:flex;align-items:center;min-height:64px;padding:14px 16px;border:1px solid var(--line);border-radius:4px;font-size:1.0625rem;line-height:1.6;color:var(--deep);background:var(--wash)}
+.project-index-link:hover{border-color:var(--accent);background:#e9eff6}
+.portfolio-project{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:center;padding-block:48px;border-top:1px solid var(--line);scroll-margin-top:115px}
+.portfolio-project .project-title-link{color:inherit;text-decoration:none}
+.portfolio-project .project-visual{min-width:0}
+.portfolio-project .tank-visual img{max-height:540px;object-fit:contain}
+.portfolio-project .project-copy{min-width:0}
+.portfolio-project .project-copy>.eyebrow,.project-process>.eyebrow{display:block;font-size:1rem;line-height:1.7;color:var(--accent);margin:0 0 16px}
+.work-list h4{font-size:1.125rem;color:var(--deep);margin:24px 0 12px;font-weight:650}
+.work-list ul{padding-left:1.15em;margin:0}
+.work-list li{font-size:1.25rem;line-height:1.8;color:var(--muted);padding-left:.15em;margin-block:10px}
+.project-copy .project-status{font-size:1rem;line-height:1.75;margin:24px 0 18px;padding:14px 16px;border-left:3px solid var(--accent);background:var(--wash);color:var(--deep)}
+.project-process{border:1px solid var(--line);border-radius:6px;background:var(--wash);padding:30px;min-width:0}
+.project-process>.eyebrow{color:var(--deep);font-size:1rem;margin-bottom:26px}
+.project-process ol{list-style:none;counter-reset:process;margin:0;padding:0}
+.project-process li{counter-increment:process;display:flex;gap:16px;align-items:flex-start;font-size:1.25rem;line-height:1.7;padding-block:22px;border-top:1px solid var(--line);color:var(--deep)}
+.project-process li::before{content:counter(process,decimal-leading-zero);font-size:1rem;flex-shrink:0;color:var(--accent);padding-top:4px;font-variant-numeric:tabular-nums}
+.project-process .process-foot{font-size:1rem;color:var(--muted);line-height:1.8;margin:20px 0 0}
+.prose-page>.project-process{margin-block:12px 45px}
+.detail-section .work-list{margin-bottom:28px}
+.detail-section p+p{margin-top:20px}
+.detail-section .inline-links{margin-block:24px}
+.detail-steps{padding-left:1.3em}
+.detail-steps li{font-size:1.25rem;line-height:1.85;color:var(--muted);padding-left:.3em;margin-block:18px}
+@media(max-width:1100px){.portfolio-project{gap:32px}.project-index{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:780px){.project-index,.js .project-index{display:grid;position:static;inset:auto;flex-direction:row;grid-template-columns:repeat(2,minmax(0,1fr));padding:0;box-shadow:none;border:0;gap:10px;background:none;margin-bottom:28px}.js .project-index a,.project-index a{font-size:1rem;line-height:1.7;padding:12px;min-height:64px}.portfolio-project{grid-template-columns:1fr;gap:26px;padding-block:32px}.work-list li{font-size:1.125rem;line-height:1.85}.work-list h4{font-size:1.0625rem}.project-copy .project-status{font-size:1rem}.project-process{padding:22px}.project-process li{font-size:1.125rem;gap:14px;padding-block:18px}.detail-steps li{font-size:1.125rem}.portfolio-project .project-copy h3{font-size:1.875rem}}
