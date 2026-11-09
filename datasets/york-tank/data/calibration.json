@@ -1,0 +1,393 @@
+{
+  "version": "underwater-calibration-v3-alpha0",
+  "note": "Existing underwater camera calibration. Board geometry is the current solver definition; physical confirmation pending. Board-to-left transform is a historical candidate, not an independently validated calibration.",
+  "cameras": {
+    "ov9281_underwater.yaml": {
+      "Camera1.fx": 1032.61282,
+      "Camera1.fy": 1048.21655,
+      "Camera1.cx": 606.955302,
+      "Camera1.cy": 553.973799,
+      "Camera2.fx": 1033.00296,
+      "Camera2.fy": 1043.60581,
+      "Camera2.cx": 653.657101,
+      "Camera2.cy": 550.384815,
+      "Camera1.k1": 0.30383851,
+      "Camera1.k2": -0.07981107,
+      "Camera1.p1": 0.03260515,
+      "Camera1.p2": -0.00549176,
+      "Camera2.k1": 0.2529693,
+      "Camera2.k2": 0.03115622,
+      "Camera2.p1": 0.02931121,
+      "Camera2.p2": 0.00362864,
+      "Stereo.b": 0.10095282,
+      "Camera.width": 1280.0,
+      "Camera.height": 800.0,
+      "Camera.fps": 20.0,
+      "Stereo.T_c1_c2": [
+        [
+          0.9978440403938293,
+          -0.022307250648736954,
+          -0.06172199919819832,
+          -0.10010260343551636
+        ],
+        [
+          0.023562530055642128,
+          0.9995285272598267,
+          0.019685059785842896,
+          -0.0004290000069886446
+        ],
+        [
+          0.061253778636455536,
+          -0.021096939221024513,
+          0.9978992342948914,
+          -0.013067429885268211
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "ov9281_underwater_rect.yaml": {
+      "Camera1.fx": 1347.52248,
+      "Camera1.fy": 1347.52248,
+      "Camera1.cx": 493.020039,
+      "Camera1.cy": 549.608562,
+      "Camera2.fx": 1347.52248,
+      "Camera2.fy": 1347.52248,
+      "Camera2.cx": 493.020039,
+      "Camera2.cy": 549.608562,
+      "Camera1.k1": 0.0,
+      "Camera1.k2": 0.0,
+      "Camera1.p1": 0.0,
+      "Camera1.p2": 0.0,
+      "Camera2.k1": 0.0,
+      "Camera2.k2": 0.0,
+      "Camera2.p1": 0.0,
+      "Camera2.p2": 0.0,
+      "Stereo.b": 0.10095282,
+      "Camera.width": 1280.0,
+      "Camera.height": 800.0,
+      "Camera.fps": 20.0,
+      "Stereo.T_c1_c2": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.10095281898975372
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "slam_rectified.yaml": {
+      "Camera.width": 1280.0,
+      "Camera.height": 800.0,
+      "Camera.fps": 20.0,
+      "Camera.fx": 1347.522482188155,
+      "Camera.fy": 1347.522482188155,
+      "Camera.cx": 493.020038604736,
+      "Camera.cy": 549.608562469482,
+      "Camera.bf": 136.036197450863
+    },
+    "ov2311.yaml": {
+      "image_width": 1600,
+      "image_height": 1300,
+      "camera_name": "ov2311",
+      "camera_matrix": {
+        "rows": 3,
+        "cols": 3,
+        "data": [
+          911.846355,
+          0.0,
+          826.542231,
+          0.0,
+          911.981062,
+          638.574602,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "distortion_model": "plumb_bob",
+      "distortion_coefficients": {
+        "rows": 1,
+        "cols": 5,
+        "data": [
+          0.0374065,
+          -0.0526644,
+          -0.00042624,
+          0.00014003,
+          0.0
+        ]
+      },
+      "rectification_matrix": {
+        "rows": 3,
+        "cols": 3,
+        "data": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "projection_matrix": {
+        "rows": 3,
+        "cols": 4,
+        "data": [
+          908.585999,
+          0.0,
+          828.299538,
+          0.0,
+          0.0,
+          916.214844,
+          637.30717,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      }
+    },
+    "board_definition.yaml": {
+      "status": "observed_in_existing_GT_solver_author_confirmation_required",
+      "tag_family": "tag36h11",
+      "rows": 3,
+      "columns": 3,
+      "tag_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "tag_size_m": 0.08,
+      "tag_gap_m": 0.02,
+      "origin": "board_geometric_center_tag_4_center",
+      "x_axis": "right",
+      "y_axis": "down",
+      "z_axis": "right_hand_rule_normal_to_board",
+      "T_board_from_left_camera": null
+    }
+  },
+  "rectification": {
+    "size": [
+      1280,
+      800
+    ],
+    "split": "first 1280 columns left; second 1280 right",
+    "flags": "CALIB_ZERO_DISPARITY",
+    "alpha": 0,
+    "interpolation": "INTER_LINEAR",
+    "map_type": "CV_16SC2",
+    "R1": [
+      [
+        0.9974691263703419,
+        -0.020602679423998276,
+        0.06805050726143479
+      ],
+      [
+        0.019955246662927608,
+        0.9997490445136208,
+        0.01018018294156424
+      ],
+      [
+        -0.06824316865890936,
+        -0.008796453527073096,
+        0.9976299375704087
+      ]
+    ],
+    "R2": [
+      [
+        0.991578025210616,
+        0.004249509731169321,
+        0.12944095791695764
+      ],
+      [
+        -0.0030177668404768984,
+        0.9999482981261272,
+        -0.009710517903717745
+      ],
+      [
+        -0.12947553051720398,
+        0.009238113536139379,
+        0.9915395827981764
+      ]
+    ],
+    "P1": [
+      [
+        1347.522482188155,
+        0.0,
+        493.0200386047363,
+        0.0
+      ],
+      [
+        0.0,
+        1347.522482188155,
+        549.6085624694824,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "P2": [
+      [
+        1347.522482188155,
+        0.0,
+        493.0200386047363,
+        -136.0361974508628
+      ],
+      [
+        0.0,
+        1347.522482188155,
+        549.6085624694824,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "Q": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -493.0200386047363
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -549.6085624694824
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1347.522482188155
+      ],
+      [
+        0.0,
+        0.0,
+        9.905617088972877,
+        -0.0
+      ]
+    ],
+    "baseline_m": 0.10095282212283567,
+    "roi1": [
+      0,
+      0,
+      1280,
+      800
+    ],
+    "roi2": [
+      0,
+      0,
+      1280,
+      800
+    ],
+    "valid_mask_pixels": [
+      1024000,
+      1024000
+    ],
+    "brightness_definition": "arithmetic mean uint8 (0..255); raw full image; rectified valid bilinear-source-support mask"
+  },
+  "candidate_transform": {
+    "name": "orb_combined",
+    "historical_matrix": [
+      [
+        0.99010414,
+        -0.08715691,
+        -0.10998848,
+        -0.09429041
+      ],
+      [
+        -0.10389168,
+        0.07165724,
+        -0.99200391,
+        0.04269037
+      ],
+      [
+        0.09434147,
+        0.99361407,
+        0.06189325,
+        0.79980334
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "direction": "T_world_left_rectified = T_world_board @ T_board_left_rectified",
+    "historical_fit_recordings": [
+      "P008",
+      "P009"
+    ],
+    "used_matrix": [
+      [
+        0.9901041392696169,
+        -0.08715691154628416,
+        -0.10998848199191244,
+        -0.09429041
+      ],
+      [
+        -0.10389167824457296,
+        0.07165723885157438,
+        -0.9920039109356854,
+        0.04269037
+      ],
+      [
+        0.09434146804400609,
+        0.9936140663707825,
+        0.0618932509844182,
+        0.79980334
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "rotation_projection_frobenius": 5.489471095322098e-09,
+    "rotation_handling": "Pipeline projects the historical 3x3 rotation onto an orthogonal rotation with SVD before use. The published matrix here is the historical input, not a new physical calibration.",
+    "status": "PHYSICAL_VALIDATION_PENDING"
+  }
+}

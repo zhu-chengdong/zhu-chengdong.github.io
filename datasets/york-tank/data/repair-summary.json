@@ -1,0 +1,94 @@
+{
+  "version": "v008",
+  "counts": {
+    "numeric_ate": 60,
+    "numeric_completeness": 64,
+    "uninitialized": 3
+  },
+  "results": [
+    {
+      "pair_id": "P006",
+      "initial_status": "未初始化；空地图导出报错",
+      "current_status": "未初始化；安全导出完成",
+      "ate_rmse_cm": null,
+      "completeness_pct": 0.0,
+      "tracking_ok_pct": 0.0,
+      "run_id": "P006-v001-export-safe-run002",
+      "numeric_abort_not_reproduced": false
+    },
+    {
+      "pair_id": "P007",
+      "initial_status": "额外轨迹导出崩溃",
+      "current_status": "重跑评估完成",
+      "ate_rmse_cm": 1.8081320633699223,
+      "completeness_pct": 77.1604938271605,
+      "tracking_ok_pct": 77.1604938271605,
+      "run_id": "P007-v001-export-safe-run002",
+      "numeric_abort_not_reproduced": false
+    },
+    {
+      "pair_id": "P032",
+      "initial_status": "数值异常中止",
+      "current_status": "重跑评估完成",
+      "ate_rmse_cm": 2.3965834047737027,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "run_id": "P032-v001-export-safe-run002",
+      "numeric_abort_not_reproduced": true
+    },
+    {
+      "pair_id": "P039",
+      "initial_status": "未初始化；空地图导出报错",
+      "current_status": "未初始化；安全导出完成",
+      "ate_rmse_cm": null,
+      "completeness_pct": 0.0,
+      "tracking_ok_pct": 0.0,
+      "run_id": "P039-v001-export-safe-run002",
+      "numeric_abort_not_reproduced": false
+    },
+    {
+      "pair_id": "P040",
+      "initial_status": "未初始化；空地图导出报错",
+      "current_status": "未初始化；安全导出完成",
+      "ate_rmse_cm": null,
+      "completeness_pct": 0.0,
+      "tracking_ok_pct": 0.0,
+      "run_id": "P040-v001-export-safe-run002",
+      "numeric_abort_not_reproduced": false
+    },
+    {
+      "pair_id": "P045",
+      "initial_status": "数值异常中止",
+      "current_status": "重跑评估完成",
+      "ate_rmse_cm": 1.6706488807684456,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "run_id": "P045-v001-export-safe-run002",
+      "numeric_abort_not_reproduced": true
+    },
+    {
+      "pair_id": "P053",
+      "initial_status": "额外轨迹导出崩溃",
+      "current_status": "重跑评估完成",
+      "ate_rmse_cm": 2.272832254611423,
+      "completeness_pct": 54.622741764080764,
+      "tracking_ok_pct": 70.03188097768331,
+      "run_id": "P053-v001-export-safe-run002",
+      "numeric_abort_not_reproduced": false
+    },
+    {
+      "pair_id": "P054",
+      "initial_status": "额外轨迹导出崩溃",
+      "current_status": "重跑评估完成",
+      "ate_rmse_cm": 0.8565828003771354,
+      "completeness_pct": 15.271493212669684,
+      "tracking_ok_pct": 40.61085972850679,
+      "run_id": "P054-v001-export-safe-run002",
+      "numeric_abort_not_reproduced": false
+    }
+  ],
+  "original_preservation": "PASS",
+  "tracking_core_unchanged": true,
+  "rerun_policy": "56 unchanged run001 plus exactly one export-safe run002 for all eight original exceptions; never best-of selection",
+  "numeric_abort_permanently_fixed": false
+}

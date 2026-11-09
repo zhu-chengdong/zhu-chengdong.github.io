@@ -1,0 +1,584 @@
+{
+  "version": "Preserved original run001 / v007 outcome snapshot",
+  "sequence_count": 64,
+  "numeric_ate_n": 55,
+  "numeric_completeness_n": 56,
+  "rows": [
+    {
+      "pair_id": "P001",
+      "condition_group": "sequence_02",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 2.4846319806629142,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P002",
+      "condition_group": "sequence_02",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 2.305015986722507,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P003",
+      "condition_group": "sequence_02",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 2.4793499692457996,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 99.9084249084249,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P004",
+      "condition_group": "sequence_02",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 1.7716733478122064,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P005",
+      "condition_group": "sequence_02",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 1.939126535672895,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P006",
+      "condition_group": "sequence_03",
+      "date": "2026-03-27",
+      "ate_rmse_cm": null,
+      "completeness_pct": null,
+      "tracking_ok_pct": null,
+      "slam_status": "未初始化；空地图导出报错"
+    },
+    {
+      "pair_id": "P007",
+      "condition_group": "sequence_03",
+      "date": "2026-03-27",
+      "ate_rmse_cm": null,
+      "completeness_pct": null,
+      "tracking_ok_pct": null,
+      "slam_status": "额外轨迹导出崩溃"
+    },
+    {
+      "pair_id": "P008",
+      "condition_group": "sequence_03",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 2.2534066851837373,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P009",
+      "condition_group": "sequence_03",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 2.0935377642265394,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P010",
+      "condition_group": "sequence_04",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 1.7829890758117644,
+      "completeness_pct": 62.45173745173745,
+      "tracking_ok_pct": 87.72597526165556,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P011",
+      "condition_group": "sequence_04",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 1.9643944471372978,
+      "completeness_pct": 65.63055062166963,
+      "tracking_ok_pct": 92.01419698314109,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P012",
+      "condition_group": "sequence_04",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 2.1083319675114907,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P013",
+      "condition_group": "sequence_04",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 2.3650645401200294,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P014",
+      "condition_group": "sequence_05",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 3.1280177205151536,
+      "completeness_pct": 62.903225806451616,
+      "tracking_ok_pct": 95.76612903225806,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P015",
+      "condition_group": "sequence_05",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 2.533494163265615,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P016",
+      "condition_group": "sequence_05",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 3.141401027200491,
+      "completeness_pct": 97.52530933633295,
+      "tracking_ok_pct": 97.52530933633295,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P017",
+      "condition_group": "sequence_05",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 2.495546016094445,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P018",
+      "condition_group": "sequence_06",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 2.573664014835534,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P019",
+      "condition_group": "sequence_06",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 2.6019606889273224,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P020",
+      "condition_group": "sequence_06",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 1.922548103826098,
+      "completeness_pct": 25.357142857142858,
+      "tracking_ok_pct": 35.1288056206089,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P021",
+      "condition_group": "sequence_06",
+      "date": "2026-03-27",
+      "ate_rmse_cm": null,
+      "completeness_pct": 0.1358695652173913,
+      "tracking_ok_pct": 0.4076086956521739,
+      "slam_status": "评估齐全；有效位姿不足，ATE不可计算"
+    },
+    {
+      "pair_id": "P022",
+      "condition_group": "sequence_07",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 2.6510457774583185,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P023",
+      "condition_group": "sequence_07",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 2.5068332854277355,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P024",
+      "condition_group": "sequence_07",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 3.6017973390632445,
+      "completeness_pct": 99.68520461699894,
+      "tracking_ok_pct": 99.69199178644764,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P025",
+      "condition_group": "sequence_07",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 1.999432952114064,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P026",
+      "condition_group": "sequence_08",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 7.852216585672429,
+      "completeness_pct": 61.09756097560975,
+      "tracking_ok_pct": 95.97560975609755,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P027",
+      "condition_group": "sequence_08",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 2.360351434870912,
+      "completeness_pct": 70.76167076167076,
+      "tracking_ok_pct": 92.50302297460702,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P028",
+      "condition_group": "sequence_08",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 4.450112293021072,
+      "completeness_pct": 67.51968503937007,
+      "tracking_ok_pct": 83.26771653543307,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P029",
+      "condition_group": "sequence_08",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 6.373931395819945,
+      "completeness_pct": 24.84787018255578,
+      "tracking_ok_pct": 81.13590263691684,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P030",
+      "condition_group": "sequence_08",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 2.1967066929880468,
+      "completeness_pct": 57.866379310344826,
+      "tracking_ok_pct": 86.63793103448276,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P031",
+      "condition_group": "sequence_08",
+      "date": "2026-03-27",
+      "ate_rmse_cm": 2.7414971524031855,
+      "completeness_pct": 55.45243619489559,
+      "tracking_ok_pct": 85.61484918793504,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P032",
+      "condition_group": "sequence_02",
+      "date": "2026-03-31",
+      "ate_rmse_cm": null,
+      "completeness_pct": null,
+      "tracking_ok_pct": null,
+      "slam_status": "数值异常中止"
+    },
+    {
+      "pair_id": "P033",
+      "condition_group": "sequence_02",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 1.9691141399901475,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P034",
+      "condition_group": "sequence_02",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 1.7133438992079024,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P035",
+      "condition_group": "sequence_02",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 1.7086235704467552,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P036",
+      "condition_group": "sequence_02",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 1.8144309661516846,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P037",
+      "condition_group": "sequence_02",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 1.7562763267222337,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P038",
+      "condition_group": "sequence_02",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 1.7306155778985859,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P039",
+      "condition_group": "sequence_03",
+      "date": "2026-03-31",
+      "ate_rmse_cm": null,
+      "completeness_pct": null,
+      "tracking_ok_pct": null,
+      "slam_status": "未初始化；空地图导出报错"
+    },
+    {
+      "pair_id": "P040",
+      "condition_group": "sequence_03",
+      "date": "2026-03-31",
+      "ate_rmse_cm": null,
+      "completeness_pct": null,
+      "tracking_ok_pct": null,
+      "slam_status": "未初始化；空地图导出报错"
+    },
+    {
+      "pair_id": "P041",
+      "condition_group": "sequence_03",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 1.6070700623022645,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P042",
+      "condition_group": "sequence_03",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 1.7910983368908302,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P043",
+      "condition_group": "sequence_04",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 1.5124664194770325,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P044",
+      "condition_group": "sequence_04",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 1.415571337983704,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P045",
+      "condition_group": "sequence_04",
+      "date": "2026-03-31",
+      "ate_rmse_cm": null,
+      "completeness_pct": null,
+      "tracking_ok_pct": null,
+      "slam_status": "数值异常中止"
+    },
+    {
+      "pair_id": "P046",
+      "condition_group": "sequence_04",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 1.5902569199215628,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P047",
+      "condition_group": "sequence_05",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 5.5104145890708285,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P048",
+      "condition_group": "sequence_05",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 1.6760586206458379,
+      "completeness_pct": 62.234042553191486,
+      "tracking_ok_pct": 96.01063829787235,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P049",
+      "condition_group": "sequence_05",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 3.5872423388720716,
+      "completeness_pct": 31.866666666666667,
+      "tracking_ok_pct": 87.2,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P050",
+      "condition_group": "sequence_05",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 2.0229107436006197,
+      "completeness_pct": 61.023622047244096,
+      "tracking_ok_pct": 87.890625,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P051",
+      "condition_group": "sequence_06",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 2.1104953880740394,
+      "completeness_pct": 54.75059382422803,
+      "tracking_ok_pct": 74.94117647058823,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P052",
+      "condition_group": "sequence_06",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 2.082907215377801,
+      "completeness_pct": 57.17367853290183,
+      "tracking_ok_pct": 92.4487594390507,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P053",
+      "condition_group": "sequence_06",
+      "date": "2026-03-31",
+      "ate_rmse_cm": null,
+      "completeness_pct": null,
+      "tracking_ok_pct": null,
+      "slam_status": "额外轨迹导出崩溃"
+    },
+    {
+      "pair_id": "P054",
+      "condition_group": "sequence_06",
+      "date": "2026-03-31",
+      "ate_rmse_cm": null,
+      "completeness_pct": null,
+      "tracking_ok_pct": null,
+      "slam_status": "额外轨迹导出崩溃"
+    },
+    {
+      "pair_id": "P055",
+      "condition_group": "sequence_07",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 1.569969654872977,
+      "completeness_pct": 53.14748201438849,
+      "tracking_ok_pct": 94.48398576512456,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P056",
+      "condition_group": "sequence_07",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 1.7189282078518628,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P057",
+      "condition_group": "sequence_07",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 1.6705027941063353,
+      "completeness_pct": 100.0,
+      "tracking_ok_pct": 100.0,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P058",
+      "condition_group": "sequence_07",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 1.6065628948890953,
+      "completeness_pct": 57.04295704295704,
+      "tracking_ok_pct": 96.33300297324084,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P059",
+      "condition_group": "sequence_08",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 4.257568101512153,
+      "completeness_pct": 18.492343934040047,
+      "tracking_ok_pct": 56.77267373380448,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P060",
+      "condition_group": "sequence_08",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 2.2861907594711752,
+      "completeness_pct": 27.18232044198895,
+      "tracking_ok_pct": 68.38074398249454,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P061",
+      "condition_group": "sequence_08",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 2.945423541705239,
+      "completeness_pct": 20.674157303370787,
+      "tracking_ok_pct": 56.34118967452301,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P062",
+      "condition_group": "sequence_08",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 2.3393686705726875,
+      "completeness_pct": 25.36520584329349,
+      "tracking_ok_pct": 68.65869853917663,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P063",
+      "condition_group": "sequence_08",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 1.3985741969783783,
+      "completeness_pct": 16.483516483516482,
+      "tracking_ok_pct": 52.702702702702695,
+      "slam_status": "评估齐全"
+    },
+    {
+      "pair_id": "P064",
+      "condition_group": "sequence_08",
+      "date": "2026-03-31",
+      "ate_rmse_cm": 2.533943175262896,
+      "completeness_pct": 17.191601049868765,
+      "tracking_ok_pct": 61.417322834645674,
+      "slam_status": "评估齐全"
+    }
+  ]
+}
