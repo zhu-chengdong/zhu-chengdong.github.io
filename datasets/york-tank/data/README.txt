@@ -1,5 +1,5 @@
-York-Tank 64 — research preview (working title)
-Metadata verified 2026-11-01. New archive, licence, DOI and final citation pending.
+York-Tank 64 - dataset release 1.0.0
+Sequence metrics verified 2026-11-01. Archive: https://doi.org/10.5281/zenodo.24094232 . Licence: CC BY 4.0.
 This collection is distinct from the published 16-sequence York-Tank release.
 
 CONTENTS
@@ -105,7 +105,9 @@ is no dedicated overexposure group, physical turbidity reading, or frame-level
 PWM record. P019 is low texture, not an overexposure treatment.
 
 PUBLICATION STATUS
-No new 64-recording DOI/licence/citation is assigned by this preview.
+The 64-recording image release is archived independently as version 1.0.0 under CC BY 4.0.
+DOI: 10.5281/zenodo.24094232 . See downloads.json for per-sequence URLs, sizes and SHA256.
+Packages contain rectified PNGs, timestamps, candidate GT and calibration; raw bags and overhead-camera video are not included.
 The related 16-sequence York-Tank publication and DOI refer to earlier work.
 Contacts: Chengdong Zhu (chengdong.zhu@york.ac.uk), Mark Post
 (mark.post@york.ac.uk), University of York.

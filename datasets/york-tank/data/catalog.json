@@ -1,7 +1,7 @@
 {
   "title": "York-Tank 64",
-  "title_status": "Working title",
-  "release_status": "Research preview; archive in preparation",
+  "title_status": "Dataset release 1.0.0",
+  "release_status": "Published on Zenodo",
   "summary": {
     "recordings": 64,
     "stereo_pairs": 59472,
@@ -6875,5 +6875,14 @@
         }
       ]
     }
-  ]
+  ],
+  "archive": {
+    "record_id": "24094232",
+    "record_url": "https://zenodo.org/records/24094232",
+    "doi": "10.5281/zenodo.24094232",
+    "version": "1.0.0",
+    "licence": "CC-BY-4.0",
+    "total_bytes": 44526826523,
+    "total_files": 70
+  }
 }

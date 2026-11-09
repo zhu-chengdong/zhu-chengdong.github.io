@@ -4,7 +4,7 @@
   const esc = value => String(value ?? '').replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
   const fmt = (n, d = 2) => n === null || n === undefined || !Number.isFinite(n) ? '—' : n.toLocaleString('en-GB', {minimumFractionDigits:d,maximumFractionDigits:d});
   const duration = s => { const whole = Math.round(s); return `${Math.floor(whole / 60)}:${String(whole % 60).padStart(2, '0')}`; };
-  let lang = 'en', data, analysis, comparison, page = 1, filtered = [], selected, previewPosition = 50;
+  let lang = 'en', data, analysis, comparison, downloads, page = 1, filtered = [], selected, previewPosition = 50;
   const t = (en, zh) => lang === 'zh' ? zh : en;
   const group = id => data.groups.find(g => g.id === id);
   const groupName = id => lang === 'zh' ? group(id).zh : group(id).name;
@@ -23,10 +23,20 @@
     if (resetPage) page = 1;
     renderRows();
   }
+  const archiveFor = r => downloads?.published ? downloads.sequences[r.id] : null;
+  function archiveCell(r) {
+    const a=archiveFor(r);
+    return a ? `<a class="sequence-download" href="${esc(a.url)}" aria-label="${t('Download','下载')} ${r.id} ZIP">${t('Download ZIP ↓','下载ZIP ↓')}</a><span class="small">${fmt(a.bytes/1e9,3)} GB</span>` : `<span class="small">${t('Archive pending','归档中')}</span>`;
+  }
+  function archivePanel(r) {
+    const a=archiveFor(r);
+    if(!a)return '';
+    return `<section class="sequence-archive" aria-label="${t('Sequence download','序列下载')}"><div><a class="button" href="${esc(a.url)}">${t('Download','下载')} ${r.id}.zip ↓</a><span>${fmt(a.bytes/1e9,3)} GB · v${esc(downloads.version)} · CC BY 4.0</span></div><p>${t('Rectified stereo PNGs, timestamps, candidate left-camera and board trajectories, calibration.','已校正双目PNG、时间戳、候选左目和板中心轨迹、标定。')}</p><details><summary>${t('SHA256 checksum','SHA256校验值')}</summary><code>${esc(a.sha256)}</code></details></section>`;
+  }
   function renderRows() {
     const size = Number($('page-size').value), pages = Math.max(1,Math.ceil(filtered.length / size));
     page = Math.min(page,pages);
-    $('sequence-rows').innerHTML = filtered.slice((page-1)*size,page*size).map(r => `<tr><td><div class="sample-cell"><img loading="lazy" src="${r.previews[1].left}" width="94" height="59" alt="${r.id} left camera sample"><div><strong>${r.id}</strong><span class="small">${r.group.replace('sequence_','SEQ ')}</span></div></div></td><td>${esc(groupName(r.group))}<span class="small">${r.date}</span></td><td><span class="value">${duration(r.duration_s)}</span><span class="small">${fmt(r.stereo_pairs,0)} ${t('pairs','对')}</span></td><td><span class="value">${fmt(r.metrics.raw_mean_gray,1)}</span><span class="small">${t('raw left / 255','原始左目 / 255')}</span></td><td><span class="value">${fmt(r.metrics.ate_rmse_cm)} cm / ${fmt(r.metrics.completeness_pct,1)}%</span><span class="small ${r.baseline_status==='Evaluated'?'':'warning'}">${r.baseline_status==='Evaluated'?t('candidate reference','候选位姿参考'):t('see baseline status','查看基线状态')}</span></td><td><button class="secondary" data-sequence="${r.id}" aria-label="${t('View','查看')} ${r.id}">${t('View →','详情 →')}</button></td></tr>`).join('');
+    $('sequence-rows').innerHTML = filtered.slice((page-1)*size,page*size).map(r => `<tr><td><div class="sample-cell"><img loading="lazy" src="${r.previews[1].left}" width="94" height="59" alt="${r.id} left camera sample"><div><strong>${r.id}</strong><span class="small">${r.group.replace('sequence_','SEQ ')}</span></div></div></td><td>${esc(groupName(r.group))}<span class="small">${r.date}</span></td><td><span class="value">${duration(r.duration_s)}</span><span class="small">${fmt(r.stereo_pairs,0)} ${t('pairs','对')}</span></td><td><span class="value">${fmt(r.metrics.raw_mean_gray,1)}</span><span class="small">${t('raw left / 255','原始左目 / 255')}</span></td><td><span class="value">${fmt(r.metrics.ate_rmse_cm)} cm / ${fmt(r.metrics.completeness_pct,1)}%</span><span class="small ${r.baseline_status==='Evaluated'?'':'warning'}">${r.baseline_status==='Evaluated'?t('candidate reference','候选位姿参考'):t('see baseline status','查看基线状态')}</span></td><td>${archiveCell(r)}</td><td><button class="secondary" data-sequence="${r.id}" aria-label="${t('View','查看')} ${r.id}">${t('View →','详情 →')}</button></td></tr>`).join('');
     $('results-count').textContent = `${filtered.length} / 64 ${t('recordings','条序列')} · ${t('metadata verified 1 Nov 2026','元数据核实于2026-11-01')}`;
     $('page-info').textContent = `${t('Page','第')} ${page} / ${pages} ${t('','页')}`;
     $('previous').disabled = page <= 1; $('next').disabled = page >= pages;
@@ -75,9 +85,10 @@
   function renderDialog() {
     const r=selected,m=r.metrics;
     $('dialog-title').textContent = `${r.id} — ${groupName(r.group)}`;
-    $('dialog-kicker').textContent = `${r.date} / ${r.group.replace('sequence_','SEQUENCE ')} / ${t('RESEARCH PREVIEW','研究预览')}`;
+    $('dialog-kicker').textContent = `${r.date} / ${r.group.replace('sequence_','SEQUENCE ')} / ${t('DATASET RELEASE','数据集版本')} ${downloads?.published?'v'+downloads.version:''}`;
     $('close-dialog').textContent = t('Close ×','关闭 ×');
     $('dialog-content').innerHTML = `<p class="dialog-intro">${fmt(r.stereo_pairs,0)} ${t('retained pairs','对保留图像')} · ${fmt(r.duration_s,2)} s · ${t('native 1280 × 800 per eye','原始单目1280×800')} · ${t('preprocessing PASS; source hashes unchanged','预处理通过；原始bag校验未改变')}</p>
+    ${archivePanel(r)}
     <div class="stereo-view" id="stereo-view"></div><div class="preview-tools"><span>${t('Temporal position','时间位置')}</span>${[25,50,75].map(p=>`<button data-position="${p}" aria-pressed="${previewPosition===p}">${p}%</button>`).join('')}<span>${t('Raw appearance · display 640 × 400 · no enhancement','原始外观 · 展示640×400 · 无增强')}</span></div><p class="timestamp" id="preview-timestamp"></p>
     <div class="metric-grid">${box(fmt(m.raw_mean_gray,1)+' / '+fmt(r.right_mean_gray,1),t('Mean grayscale · raw left / right','平均灰度 · 原始左/右'))}${box(fmt(m.dark_le030_pct,1)+'%',t('Dark fraction ≤30 · left','暗像素≤30 · 左'))}${box(fmt(m.bright_ge250_pct,2)+'%',t('Near saturation ≥250 · left','近饱和≥250 · 左'))}${box(fmt(m.spatial_cv_median,3),t('Spatial brightness CV · left','空间亮度CV · 左'))}${box(fmt(m.corner_density_median,0),t('Corners / MP · left','角点/百万像素 · 左'))}${box(fmt(m.dynamic_area_mean_pct,2)+'%',t('Semantic foreground · left','语义前景占比 · 左'))}${box(fmt(m.board_speed_p95_m_s,3)+' m/s',t('Board speed P95','板中心速度P95'))}${box(fmt(m.angular_speed_p95_deg_s,1)+' °/s',t('Rotation rate P95','角速度P95'))}${box(fmt(m.ate_rmse_cm)+' cm',t('ATE RMSE · candidate reference','ATE RMSE · 候选参考'))}${box(fmt(m.completeness_pct,3)+'%',t('Longest-segment completeness','最长连续段完整率'))}${box(fmt(m.tracking_ok_pct,1)+'%',t('Tracking OK frames','跟踪成功帧占比'))}${box(fmt(r.gt_valid_pct,1)+'%',t('Board-pose solver valid frames','板位姿求解有效帧'))}</div>
     <p class="detail-warning"><strong>${t('Baseline status','基线状态')}</strong> — ${esc(r.baseline_status)}<br>${t('Current run','当前运行')}: ${esc(r.baseline_run_id)}${r.baseline_revision==='export-safe-run002'?'<br>'+t('Fixed single rerun; original first-run state retained: ','固定单次重跑；保留首轮状态：')+esc(r.original_baseline_status):''}${r.rerun_note?'<br>'+t(r.rerun_note,'首轮SO3 NaN未在本次重跑复现，尚未证明数值故障已永久修复。'):''}${r.reference_fit_source?'<br>'+t('Historical transform-fit recording: not independent reference validation.','历史外参拟合来源，不是独立外参验证序列。'):''}<br>${t('All left-camera results use the historical candidate extrinsic. Pixel residual and low ATE do not establish independent metric GT accuracy.','左目结果均使用历史候选外参。像素重投影残差及较低ATE不能证明独立GT的米制精度。')}</p>
@@ -135,8 +146,8 @@
   $('review-reset').addEventListener('click',()=>{$('review-version').value='compare';$('review-date').value='all';$('review-group').value='';renderDailyReview();});
   async function start() {
     try {
-      const results=await Promise.all(['data/catalog.json','data/analysis.json','data/comparison-by-date-v001.json'].map(async path=>{const r=await fetch(path);if(!r.ok)throw Error(`HTTP ${r.status}`);return r.json();}));
-      [data,analysis,comparison]=results;
+      const results=await Promise.all(['data/catalog.json','data/analysis.json','data/comparison-by-date-v001.json','data/downloads.json'].map(async path=>{const r=await fetch(path);if(!r.ok)throw Error(`HTTP ${r.status}`);return r.json();}));
+      [data,analysis,comparison,downloads]=results;
       if(data.sequences.length!==64||new Set(data.sequences.map(r=>r.id)).size!==64)throw Error('Catalogue validation failed');
       const requestedLanguage=new URLSearchParams(location.search).get('lang');
       let preferredLanguage=requestedLanguage;
