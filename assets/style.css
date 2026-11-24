@@ -68,3 +68,33 @@ html[lang=zh-CN] h1,html[lang=zh-CN] h2,html[lang=zh-CN] h3{font-family:var(--sa
 .control-gallery .control-field-shot img{max-height:680px;object-fit:contain}
 .control-gallery .control-drive-shot img{aspect-ratio:1.1;object-fit:cover}
 @media(max-width:780px){.project-media-stack{gap:16px}.project-shot figcaption{font-size:1rem;padding:12px 14px}.gallery-heading{font-size:1.75rem}.gallery-intro{font-size:1.125rem}.gallery-views,.control-gallery{grid-template-columns:1fr;gap:18px}.gallery-feature{grid-template-columns:1fr;gap:18px}.gallery-note{padding:16px;font-size:1rem}.project-gallery{margin-bottom:38px}.control-gallery .control-field-shot img{max-height:560px}}
+@media (min-width: 781px) and (max-width: 940px) {
+  .js .masthead .menu-toggle {
+    display: block;
+    border: 0;
+    background: transparent;
+    font-size: 1rem;
+    color: var(--deep);
+    min-height: 44px;
+    padding: 6px;
+  }
+  .js .masthead #main-nav {
+    display: none;
+    position: absolute;
+    inset: 99px 0 auto;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 13px 32px;
+    box-shadow: 0 8px 12px #172a3a08;
+  }
+  .js .nav-open .masthead #main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  html:not(.js) .masthead .header-inner,
+  html:not(.js) .masthead #main-nav {
+    flex-wrap: wrap;
+  }
+}

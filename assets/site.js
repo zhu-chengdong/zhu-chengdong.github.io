@@ -18,9 +18,9 @@
       const href = link.getAttribute('href');
       if (!href || href.startsWith('#')) return;
       const url = new URL(href, window.location.href);
-      if (url.origin === location.origin && /\.html$/.test(url.pathname)) {
+      if (url.origin === location.origin && (/\.html$/.test(url.pathname) || link.hasAttribute('data-language-link'))) {
         url.searchParams.set('lang', current);
-        link.setAttribute('href', url.pathname.split('/').pop() + url.search + url.hash);
+        link.setAttribute('href', href.split(/[?#]/, 1)[0] + url.search + url.hash);
       }
     });
     document.querySelectorAll('.copy-status').forEach(el => { el.textContent = ''; });
